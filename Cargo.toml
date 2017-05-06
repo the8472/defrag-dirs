@@ -1,0 +1,36 @@
+[package]
+name = "defrag-dirs"
+version = "0.1.0"
+authors = ["The8472"]
+description = "Directory index defragmentation"
+keywords = ["defrag", "ext4", "linux", "cli"]
+repository = "https://github.com/the8472/defrag-dirs"
+readme = "README.md"
+categories = ["command-line-utilities", "filesystem"]
+license = "GPL-3.0"
+
+include = [
+    "**/*.rs",
+    "README.md",
+    "LICENCE",
+    "Cargo.toml",
+]
+
+[[bin]]
+path = "src/main.rs"
+name = "defrag-dirs"
+
+[profile.release]
+lto = true
+opt-level = "s"
+panic = "abort"
+debug = false
+
+
+[dependencies]
+btrfs = "1.2.1"
+walkdir = "1.0.7"
+clap = "2.20"
+derive-error = "0.0.3"
+time = "0.1.37"
+nix = "0.8.1"
