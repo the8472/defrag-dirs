@@ -1,6 +1,6 @@
 [package]
 name = "defrag-dirs"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["The8472"]
 description = "Directory index defragmentation"
 keywords = ["defrag", "ext4", "linux", "cli"]
@@ -14,6 +14,7 @@ include = [
     "README.md",
     "LICENCE",
     "Cargo.toml",
+    "Cargo.lock"
 ]
 
 [[bin]]
@@ -28,7 +29,7 @@ debug = false
 
 
 [dependencies]
-btrfs = "1.2.1"
+btrfs2 = "1.2.2"
 walkdir = "1.0.7"
 clap = "2.20"
 derive-error = "0.0.3"

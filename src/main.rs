@@ -20,7 +20,7 @@ extern crate alloc_system;
 #[macro_use] extern crate derive_error;
 extern crate walkdir;
 extern crate time;
-extern crate btrfs;
+extern crate btrfs2 as btrfs;
 extern crate nix;
 
 use btrfs::linux::{get_file_extent_map_for_path};
